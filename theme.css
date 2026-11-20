@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #000080;
+  --color-primary-contrast: #ffffff;
+  --color-bg: #008080;
+  --color-surface: #c0c0c0;
+  --color-text: #1c1c1c;
+  --color-muted: #696969;
+  --color-highlight: #ffffe1;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 0px;
+}
