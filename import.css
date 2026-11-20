@@ -1,0 +1,128 @@
+.import-dialog {
+  width: min(680px, calc(100% - 30px));
+  max-height: calc(100% - 70px);
+}
+
+.import-dialog .window-body {
+  overflow: auto;
+}
+
+.import-intro {
+  margin-top: 0;
+}
+
+.import-file-list {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.import-file {
+  background: #f5f5ef;
+  border: 1px solid #c9c9bd;
+  padding: 10px;
+}
+
+.import-file-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.import-file-top input {
+  width: auto;
+  height: auto;
+  margin: 3px 0 0;
+}
+
+.import-file-top label {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.import-file-top small {
+  display: block;
+  font-weight: 400;
+  color: #6b756c;
+  margin-top: 3px;
+}
+
+.import-file-fields {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 70px minmax(140px, 1fr);
+  gap: 8px;
+  margin: 8px 0 0 21px;
+}
+
+.import-file-fields label {
+  margin: 0 0 4px;
+  font-size: 10px;
+}
+
+.import-file-fields input {
+  width: 100%;
+  height: 27px;
+  font-size: 11px;
+}
+
+.import-file-fields input[type=file] {
+  padding: 3px;
+}
+
+.import-summary {
+  color: #65796a;
+  font-size: 11px;
+}
+
+.app-card-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.app-card-wrap .app-card {
+  width: 100%;
+  height: 100%;
+}
+
+.remove-app {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  color: #8c5a55;
+  font-size: 13px;
+}
+
+.app-icon img,
+.desktop-icon-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.desktop-icon-art img {
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.desktop-icons {
+  max-height: calc(100% - 55px);
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+@media(max-width: 560px) {
+  .import-file-fields {
+    grid-template-columns: 1fr 65px;
+  }
+
+  .import-file-fields .icon-upload {
+    grid-column: 1 / -1;
+  }
+}
