@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML OS — your little corner of the web</title>
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/import.css">
+</head>
+
+<body>
+  <main class="desktop" id="desktop" aria-label="Windows 98 desktop">
+    <div class="desktop-decoration" aria-hidden="true"><span>HTML</span><span>OS<span class="decoration-period">.</span></span><small>YOUR LITTLE CORNER OF THE WEB</small></div>
+    <div class="desktop-icons" aria-label="Desktop shortcuts">
+      <button class="desktop-icon" data-action="explorer"><span class="desktop-icon-art">🖥️</span><span>My Computer</span></button>
+      <button class="desktop-icon" data-action="explorer"><span class="desktop-icon-art">📁</span><span>HTML Apps</span></button>
+      <button class="desktop-icon" data-action="connect"><span class="desktop-icon-art">🌐</span><span>GitHub</span></button>
+      <button class="desktop-icon" data-action="about"><span class="desktop-icon-art">📝</span><span>Read me</span></button>
+    </div>
+
+    <section class="window explorer-window" id="explorer" data-window="explorer" aria-label="HTML Apps explorer">
+      <div class="title-bar draggable">
+        <div class="title-bar-text"><span>📁</span> HTML Apps</div>
+        <div class="title-bar-controls"><button aria-label="Minimize" data-window-action="minimize"></button><button aria-label="Maximize" data-window-action="maximize"></button><button aria-label="Close" data-window-action="close"></button></div>
+      </div>
+      <div class="menu-bar"><button data-action="connect">File</button><button data-action="refresh">Edit</button><button data-action="explorer">View</button><button data-action="about">Help</button></div>
+      <div class="toolbar"><button data-action="back" title="Back"><span>⬅️</span><small>Back</small></button><button data-action="refresh" title="Refresh"><span>🔄</span><small>Refresh</small></button>
+        <div class="toolbar-separator"></div><button data-action="connect" title="Connect a repository"><span>🌐</span><small>Connect</small></button><button data-action="about" title="About"><span>❔</span><small>Help</small></button>
+        <div class="toolbar-brand"><span class="brand-squares">▦</span> HTML OS</div>
+      </div>
+      <div class="address-bar"><span>Address</span>
+        <div class="address-field"><span>📂</span><span id="address">My Computer \ HTML Apps</span></div><button data-action="connect" aria-label="Connect repository">Go</button>
+      </div>
+      <div class="explorer-content">
+        <aside class="sidebar">
+          <div class="sidebar-title"><span>✳</span> HTML Apps</div>
+          <div class="sidebar-rule"></div>
+          <p>Your apps, all in one place.</p>
+          <div class="sidebar-label">EXPLORE</div><button class="side-link active" data-filter="all"><span>📁</span> All apps <b id="all-count">4</b></button><button class="side-link" data-filter="builtin"><span>⭐</span> Built-in apps</button><button class="side-link" data-filter="github"><span>🌐</span> From GitHub</button>
+          <div class="sidebar-label sidebar-label-lower">YOUR REPOSITORY</div>
+          <div class="repo-sidebar" id="repo-sidebar"><span class="repo-dot"></span> Not connected</div><button class="sidebar-connect" data-action="connect">+ Connect a repo</button>
+          <div class="sidebar-bottom"><span>💡</span>
+            <p>Good things come in small windows.</p>
+          </div>
+        </aside>
+        <div class="main-panel">
+          <div class="welcome-row">
+            <div>
+              <div class="eyebrow"><span class="online-dot"></span> WELCOME TO YOUR DESKTOP</div>
+              <h1>A little space for<br><em>big ideas.</em></h1>
+              <p>Discover, collect, and run HTML apps from GitHub.<br class="desktop-break"> Just like the good old days.</p><button class="connect-button" data-action="connect"><span>🌐</span> Connect a GitHub repo <span class="button-arrow">→</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="hero-spark spark-one">✦</div>
+              <div class="hero-spark spark-two">✳</div>
+              <div class="mini-window mini-back">
+                <div></div><span>♡</span>
+              </div>
+              <div class="mini-window mini-front">
+                <div><i></i><i></i><i></i></div><span>&lt;/&gt;</span>
+              </div>
+              <div class="hero-orbit">✦</div>
+            </div>
+          </div>
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow muted-eyebrow">YOUR COLLECTION</div>
+              <h2 id="collection-title">All applications <span id="heading-count">04</span></h2>
+            </div><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search apps..." aria-label="Search apps"></label>
+          </div>
+          <div class="app-grid" id="app-grid"></div>
+          <div class="empty-state" id="empty-state" hidden><span>📂</span><strong>No apps found</strong>
+            <p>Try another search or connect a public GitHub repository.</p><button data-action="connect">Connect a repository</button>
+          </div>
+          <div class="tip-bar"><span>✨</span>
+            <p><strong>A little tip:</strong> Click an app to open it. Connect a public GitHub repo to bring your own HTML creations in.</p><button data-action="about" aria-label="Learn more">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="status-bar"><span id="status-text">4 object(s)</span><span>My Computer</span><span>🟢 Ready</span></div>
+    </section>
+    <div id="window-layer"></div>
+    <div class="start-menu" id="start-menu" hidden>
+      <div class="start-rail"><span>HTML <b>OS</b></span></div>
+      <div class="start-items">
+        <div class="start-heading">Hello, friend! <span>✳</span></div><button data-action="explorer">📁 <span><b>HTML Apps</b><small>Browse your collection</small></span></button><button data-action="connect">🌐 <span><b>Connect to GitHub</b><small>Bring your own apps</small></span></button><button data-action="about">📝 <span><b>About HTML OS</b><small>A little help & information</small></span></button>
+        <div class="start-divider"></div><button data-action="show-desktop">🖥️ <span><b>Show desktop</b></span></button>
+      </div>
+    </div>
+    <footer class="taskbar"><button class="start-button" id="start-button"><span class="windows-mark">▦</span> Start</button>
+      <div class="task-divider"></div><button class="quick-icon" data-action="explorer" title="HTML Apps">📁</button><button class="quick-icon" data-action="connect" title="Connect GitHub">🌐</button>
+      <div class="task-divider"></div>
+      <div class="task-buttons" id="task-buttons"><button class="task-button active" data-task="explorer">📁 <span>HTML Apps</span></button></div>
+      <div class="tray"><span title="Volume">🔊</span><span title="Connected">🌐</span><time id="clock"></time></div>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+
+</html>
